@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/index.css">	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<title>INFORINGA</title>
+</head>
+<body>
+	<header>
+	<!--IMAGEN PRINCIPAL-->
+		<div class="container-fuild d-flex justify-content-center imagenlogo">
+			<img src="./image/LogoINFORINGA-01.png" width="150" height="auto" class="img-responsive align-center d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block" alt="Responsive image">
+		</div>		
+	<!--FIN DE IMAGEN PRINCIPAL-->
+	</header>
+	<!--NAVBAR-->
+	<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #007F5F;">
+		<a class="navbar-brand text-white" href="#">
+			<img src="./image/INFORINGAlogochiquito.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="logo">				
+		</a>
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>		  
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			<div class="text-center mr-auto">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="btn btn-success">Crear Post</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link text-white" href="#">Ultimos Posteos</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link text-white">Ultimos Comentarios</a>
+					</li>					
+				</ul>				
+			</div>
+			<div class="d-flex justify-content-center">
+				<div>
+					<a href="./registro.html" class="btn btn-danger mr-2" style="background-color: #BF6300;">REGISTRARSE</a>
+				</div>
+				<div class="inicioSesion">					
+				<!-- BOTON MODAL -->
+					<button type="button" class="btn btn-danger" style="background-color: #BF6300;" data-toggle="modal" data-target="#exampleModal">
+						ACCEDER
+					</button>
+					<!-- FIN BOTON MODAL -->
+					<!-- MODAL-->
+					<div class="modal fade" data-backdrop="false" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title ml-auto" id="exampleModalLabel">INICIAR SESION</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="container login-form">										
+										<div class="panel panel-default">
+											<div class="panel-body">
+												<form>
+													<div class="input-group login-userinput mt-3 ml-2">
+														<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+														<input id="txtUser" type="text" class="form-control" name="username" placeholder="Usuario">
+													</div>
+													<div class="input-group ml-2">
+														<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+														<input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Contraseña">
+														<span id="showPassword" class="input-group-btn"></span>														
+													</div>
+													<button class="btn btn-danger btn-block login-button ml-2" style="background-color: #BF6300;" type="submit"><i class="fa fa-sign-in"></i>Acceder</button>
+													<div class="checkbox login-options">
+														<label><input class="checkbox ml-auto" type="checkbox"/> Recordame</label>
+														<a href="#" class="login-forgot">Olvidó Usuario/Contraseña?</a>
+													</div>		
+												</form>			
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
+									<button type="button" class="btn btn-danger" style="background-color: #BF6300;">ACEPTAR</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- FIN MODAL -->				
+				</div>
+			</div>				
+		</div>						
+	</nav>
+	<!--FIN NAVBAR-->		
+	
+	<main class="container-fluid mt-5 mb-5 text-white">
+		<h1 class="text-center">PRUEBA</h1>
+		<p class="mt-5">			
+			<h2 class="text-center mb-4">¿Qué es Lorem Ipsum?</h2>
+			Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. 
+			Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor
+			(N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
+			No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. 
+			Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, 
+			como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+		</p>
+		<p class="mt-5">
+			<h2 class="text-center mb-4">¿De dónde viene?</h2>
+			Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, 
+			que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia,
+			 encontró una de las palabras más oscuras de la lengua del latín, "consecteur", en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos del latín, descubrió la fuente indudable. 
+			 Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum" (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. 
+			 Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. La primera linea del Lorem Ipsum, "Lorem ipsum dolor sit amet..", viene de una linea en la sección 1.10.32
+			El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. Las secciones 1.10.32 y 1.10.33 de "de Finibus Bonorum et Malorum" 
+			por Cicero son también reproducidas en su forma original exacta, acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham.
+		</p>
+		<p class="mt-5">
+			<h2 class="text-center mb-4">¿Por qué lo usamos?</h2>
+			Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. 
+			El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, 
+			contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto,
+			 y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado 
+			 a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).
+		</p>
+	</main>
+	<!--FOOTER-->
+	<footer id="sticky-footer" class="py-4 text-white" style="background-color: #007F5F;">
+		<div class="container text-center" >
+		  <small>Copyright &copy; Your Website</small>
+		</div>
+	</footer>
+	<!--FIN DEL FOOTER-->
+</body>
+</html>
