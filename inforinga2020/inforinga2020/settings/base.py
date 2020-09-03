@@ -25,7 +25,7 @@ SECRET_KEY = 'ukw+-h!t#4y$ij%=o#hy922%8s^^d2rdt@-z&wi&4_#_*mt%l)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-
+AUTH_USER_MODEL = 'usuarios.Usuario'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
 	'django.contrib.sessions',
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
+	'apps.usuarios',
 	'crispy_forms',
 ]
 
@@ -100,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es-ar'
 
-TIME_ZONE = 'America/Argentina(Buenos_Aires'
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 USE_I18N = True
 
