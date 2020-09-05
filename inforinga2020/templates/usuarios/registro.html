@@ -1,18 +1,15 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% load static %}
 
-{% block contenido %}    
-	
-	<div class="container">
+{% block contenido %}
+	<div class="container pt-4 pb-4 text-white shadow-lg p-3 rounded" style="background:#007F5F">
 		<h1>REGISTRO DE USUARIO</h1>
 		{{form.errors}}
-		<form method="POST" enctype="multipart/form-data">{% csrf_token %}
-			{{form.as_p}}
-			<input type="submit" value="CREAR">
+		<form class="container" method="POST">{% csrf_token %}
+			<!--{{form.as_p}}-->
+			{{ form|crispy }}
+			<button type="submit" class="btn btn-danger" style="background: #994E04" value="CREAR">CREAR</button>			
 		</form>
-	</div>
-	<hr>
-	<hr>
-	<hr>
-	
+	</div>		
 {% endblock %}

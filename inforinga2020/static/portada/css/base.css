@@ -1,0 +1,18 @@
+body {
+    background-color: #232E2E;
+}
+
+.imagenlogo {
+    background-color: #007F5F;
+    height: 15vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#page-content {
+    flex: 1 0 auto;    
+}
+  
+#sticky-footer {
+    flex-shrink: none;    
+}
