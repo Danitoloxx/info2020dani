@@ -1,17 +1,23 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
-{% block contenido %}         
-    <div class="container mt-5 pt-4 pb-4 text-white shadow-lg p-3 rounded" style="background:#007F5F">        
-        <h1>INICIAR SESION</h1>
-        <form method="POST">{% csrf_token %}
-            {{form.errors}}
-            {{ form|crispy }}
-            <button type="submit" class="btn btn-danger mt-3" style="background: #994E04" value="ENVIAR">ACCEDER</button>            
-        </form>
+{% block contenido %}             
+    <div class="container login mt-2 text-white shadow-lg p-3 rounded" style="background:#007F5F">        
+        <div class="titulo d-flex justify-content-center mb-3 mt-5">
+            <h1>INICIAR SESION</h1>
+        </div>
+        <div class="entrada">
+            <form class="" method="POST">{% csrf_token %}
+                {{form.errors}}
+                {{ form|crispy }}
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-danger mt-3 btn-lg btn-block" style="background: #BF6300" value="ENVIAR">ACCEDER</button>            
+                </div>
+            </form>
+        </div>
         <br>
-        <div class="container ml-auto mr-2">
-            <a class="text-white" href="{% url 'inicio' %}">¿Ya tenes cuenta? Sacame de acá. </a>
+        <div class="container d-flex justify-content-center">
+            <a class="text-white mr-2" href="{% url 'inicio' %}">¿Ya tenes cuenta? Sacame de acá </a>
             <a class="text-white" href="{% url 'usuarios:registrar' %}">¿No tenes cuenta? Registrate. </a>
         </div>
     </div>
