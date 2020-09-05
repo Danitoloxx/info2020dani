@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="./css/registro.css">
-	<title>Registro</title>
-</head>
-<body>
-	<section class="form-registro">
-		<h4>Formulario de Registro</h4>
-		<input class="controls" type="text" name="nombre" id="nombres" placeholder="Ingrese su Nombre">
-		<input class="controls" type="text" name="apellido" id="apellidos" placeholder="Ingrese su Apellido">
-		<input class="controls" type="email" name="email" id="email" placeholder="Ingrese su Correo electronico">
-		<input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
-		<p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
-		<input class="botons" type="submit" value="Registrar">
-		<p><a href="{% url 'inicio' %}">Ya tengo cuenta ¿Sacame de aqui?</a></p>
-	</section>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}    
+	<h1>soy EL REGISTRO</h1>
+{% endblock %}
