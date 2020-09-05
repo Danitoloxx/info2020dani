@@ -5,6 +5,3 @@ def Home(request):
 
 def Login(request):
     return render(request,'usuarios/login.html')
-
-def Registro(request):
-    return render(request,'registro.html')

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}    
+	
+	<div class="container">
+		<h1>REGISTRO DE USUARIO</h1>
+		{{form.errors}}
+		<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" value="CREAR">
+		</form>
+	</div>
+	<hr>
+	<hr>
+	<hr>
+	
+{% endblock %}
