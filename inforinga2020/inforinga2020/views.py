@@ -5,3 +5,8 @@ def Home(request):
 
 def Login(request):
     return render(request,'usuarios/login.html')
+
+def Perfil(request):
+    args = {'user': request.user}
+    return render(request, 'usuarios/perfil.html', args)
+

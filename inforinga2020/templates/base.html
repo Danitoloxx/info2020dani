@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'portada/css/base.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'usuarios/css/login.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'usuarios/css/registro.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'usuarios/css/perfil.css' %}">
 	<title>INFORINGA</title>
 </head>
 <body>
@@ -50,7 +51,7 @@
 			<div class="d-flex justify-content-center">				
 				{% if user.is_authenticated %}
 				<div>
-					<a href="#" class="btn btn-danger mr-2 text-uppercase" style="background-color: #BF6300;">BIENVENIDO {{user.username}}</a>
+					<a href="{% url 'perfil' %}" class="btn btn-danger mr-2 text-uppercase" style="background-color: #BF6300;">BIENVENIDO {{user.username}}</a>
 				</div>
 				<div>
 					<a href="{% url 'logout' %}" class="btn btn-danger mr-2" style="background-color: #BF6300;">SALIR</a>
