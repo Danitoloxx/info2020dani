@@ -1,0 +1,12 @@
+
+.cuerpo {    
+    background-color: #007F5F!Important;    
+    height: 620px;
+    width: 500px;
+    padding-top: 40px;
+}
+
+.cuerpo .item {
+    font-size: 20px;
+    font-family: 'calibri';    
+}
