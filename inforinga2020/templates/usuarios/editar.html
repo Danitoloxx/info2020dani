@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block contenido %}
-	<div class="modificacion container registro text-white shadow-lg p-3 rounded" style="background:#007F5F">
+	<div class="container modificacion registro text-white shadow-lg p-3 rounded" style="background:#007F5F">
 		<div class="d-flex justify-content-center mb-2 mt-4">
 			<h1>EDITAR PERFIL</h1>
 		</div>
@@ -13,7 +13,7 @@
 				<label for="id_username" class="requiredField">Nombre de usuario<span class="asteriskField">*</span></label>
 				<div class="leyenda">
 					<input type="text" name="username" value="{{user}}" maxlength="120" class="textinput textInput form-control" required id="id_username"> 
-					<small id="hint_id_username" class="text-center form-text text-muted">Obligatorio. Longitud máxima de 150 caracteres. Solo puede estar formado por letras, números y los caracteres @/./+/-/_.</small> 
+					<small id="hint_id_username" class="text-center form-text text-muted">Obligatorio. Longitud máxima de 120 caracteres. Solo puede estar formado por letras, números y los caracteres @/./+/-/_.</small> 
 				</div> 
 			</div>
 			<div id="div_id_email" class="form-group"> 
@@ -33,10 +33,10 @@
 				<div class=""> 
 					<input type="text" name="last_name" value="{{user.last_name}}" maxlength="150" class="textinput textInput form-control" id="id_last_name"> 
 				</div>
-			</div> 									
-		</form>
-		<div class="boton mt-5 d-flex justify-content-center">
-			<button type="submit" class="btn btn-danger btn-lg btn-block" style="background: #BF6300" value="CREAR">EDITAR</button>			
-		</div>
+			</div>
+			<div class="boton d-flex justify-content-center mt-5">
+				<button type="submit" class="btn btn-danger btn-lg btn-block" style="background: #BF6300" value="CREAR">EDITAR</button>			
+			</div>									
+		</form>		
 	</div>		
 {% endblock %}

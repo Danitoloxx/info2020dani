@@ -7,8 +7,7 @@
             <h1>INICIAR SESION</h1>
         </div>
         <div class="entrada">
-            <form class="" method="POST">{% csrf_token %}
-                {{form.errors}}
+            <form class="" method="POST">{% csrf_token %}                
                 {{ form|crispy }}
                 <div class="d-flex justify-content-end">
                     <button type="submit" class="btn btn-danger mt-3 btn-lg btn-block" style="background: #BF6300" value="ENVIAR">ACCEDER</button>            
