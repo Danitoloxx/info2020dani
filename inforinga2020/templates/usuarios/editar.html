@@ -3,17 +3,17 @@
 {% load static %}
 
 {% block contenido %}
-	<div class="container registro text-white shadow-lg p-3 rounded" style="background:#007F5F">
-		<div class="d-flex justify-content-center mb-4 mt-4">
-			<h1>REGISTRO DE USUARIO</h1>
+	<div class="modificacion container registro text-white shadow-lg p-3 rounded" style="background:#007F5F">
+		<div class="d-flex justify-content-center mb-2 mt-4">
+			<h1>EDITAR PERFIL</h1>
 		</div>
 		{{form.errors}}
-		<form class="container" method="POST">{% csrf_token %}
+		<form class="container ml-0 mb-3" method="POST">{% csrf_token %}
 			<div id="div_id_username" class="form-group"> 
 				<label for="id_username" class="requiredField">Nombre de usuario<span class="asteriskField">*</span></label>
-				<div class="">
-					<input type="text" name="username" value="{{user}}" maxlength="150" class="textinput textInput form-control" required id="id_username"> 
-					<small id="hint_id_username" class="form-text text-muted">Obligatorio. Longitud máxima de 150 caracteres. Solo puede estar formado por letras, números y los caracteres @/./+/-/_.</small> 
+				<div class="leyenda">
+					<input type="text" name="username" value="{{user}}" maxlength="120" class="textinput textInput form-control" required id="id_username"> 
+					<small id="hint_id_username" class="text-center form-text text-muted">Obligatorio. Longitud máxima de 150 caracteres. Solo puede estar formado por letras, números y los caracteres @/./+/-/_.</small> 
 				</div> 
 			</div>
 			<div id="div_id_email" class="form-group"> 
@@ -33,11 +33,10 @@
 				<div class=""> 
 					<input type="text" name="last_name" value="{{user.last_name}}" maxlength="150" class="textinput textInput form-control" id="id_last_name"> 
 				</div>
-			</div> 
-			<!--{{ form|crispy }}-->
-			<div class="d-flex justify-content-center">
-				<button type="submit" class="btn btn-danger btn-lg btn-block" style="background: #BF6300" value="CREAR">EDITAR</button>			
-			</div>			
+			</div> 									
 		</form>
+		<div class="boton mt-5 d-flex justify-content-center">
+			<button type="submit" class="btn btn-danger btn-lg btn-block" style="background: #BF6300" value="CREAR">EDITAR</button>			
+		</div>
 	</div>		
 {% endblock %}

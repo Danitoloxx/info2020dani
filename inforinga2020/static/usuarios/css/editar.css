@@ -1,0 +1,16 @@
+.modificacion  {
+    height: 620px;
+    width: 500px;
+}
+
+.modificacion .form-group .textinput {
+    width: 435px;
+}
+
+.modificacion .form-group #hint_id_username {
+    width: 435px;
+}
+
+.modificacion .form-group .emailinput{
+    width: 435px;
+}
