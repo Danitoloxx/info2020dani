@@ -1,3 +1,15 @@
+.registro {    
+    height: 750px;
+    width: 500px;
+    padding-top: 40px;   
+}
+
+.btn:active {
+    background-color: #9d5202!Important;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
 .modificacion  {
     height: 620px;
     width: 500px;

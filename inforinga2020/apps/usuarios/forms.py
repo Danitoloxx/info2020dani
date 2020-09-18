@@ -4,9 +4,9 @@ from .models import Usuario
 class RegistroUsuarioForm(UserCreationForm):
     class Meta:
         model = Usuario
-        fields = ['username','email','first_name','last_name','password1','password2']
+        fields = ['username','email','first_name','last_name','provincia','ciudad','universidad','password1','password2',]
 
 class EditarUsuarioForm(UserChangeForm):
     class Meta:
         model = Usuario
-        fields = ['username','email','first_name','last_name']
+        fields = ['email','first_name','last_name','provincia','ciudad','universidad']

@@ -1,21 +1,24 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
 {% load static %}
 
+<!-- AGREGO EL TITULO DEL TEMPLATE-->
+{% block titulo %}
+Editar Usuario
+{% endblock %}
+
+<!--DE ESTA FORMA AGREGO EL EDITAR.CSS AL BLOQUE DE LA BASE/ BLOCK.SUPER SE USA PARA OBTENER EL CONTENIDO DEL BLOQUE PADRE -->
+{% block css %}
+    {{ block.super }}
+     <link rel="stylesheet" type="text/css" href="{% static 'usuarios/css/editar.css' %}">
+{% endblock %}
+
 {% block contenido %}
-	<div class="container modificacion registro text-white shadow-lg p-3 rounded" style="background:#007F5F">
+	<div class="container registro text-white shadow-lg p-3 rounded" style="background:#007F5F">
 		<div class="d-flex justify-content-center mb-2 mt-4">
 			<h1>EDITAR PERFIL</h1>
 		</div>
-		{{form.errors}}
-		<form class="container ml-0 mb-3" method="POST">{% csrf_token %}
-			<div id="div_id_username" class="form-group"> 
-				<label for="id_username" class="requiredField">Nombre de usuario<span class="asteriskField">*</span></label>
-				<div class="leyenda">
-					<input type="text" name="username" value="{{user}}" maxlength="120" class="textinput textInput form-control" required id="id_username"> 
-					<small id="hint_id_username" class="text-center form-text text-muted">Obligatorio. Longitud máxima de 120 caracteres. Solo puede estar formado por letras, números y los caracteres @/./+/-/_.</small> 
-				</div> 
-			</div>
+		{{form.errors}}	
+		<form class="container modificar" method="POST">{% csrf_token %}			
 			<div id="div_id_email" class="form-group"> 
 				<label for="id_email" class="">Dirección de email</label> 
 				<div class=""> 
@@ -34,9 +37,27 @@
 					<input type="text" name="last_name" value="{{user.last_name}}" maxlength="150" class="textinput textInput form-control" id="id_last_name"> 
 				</div>
 			</div>
+			<div id="div_id_provincia" class="form-group"> 
+				<label for="id_provincia" class="">Provincia</label> 
+				<div class=""> 
+					<input type="text" name="provincia" value="{{user.provincia}}" maxlength="150" class="textinput textInput form-control" id="id_last_name"> 
+				</div>
+			</div>
+			<div id="div_id_ciudad" class="form-group"> 
+				<label for="id_ciudad" class="">Ciudad</label> 
+				<div class=""> 
+					<input type="text" name="ciudad" value="{{user.ciudad}}" maxlength="150" class="textinput textInput form-control" id="id_last_name"> 
+				</div>
+			</div>
+			<div id="div_id_universidad" class="form-group"> 
+				<label for="id_universidad" class="">Universidad</label> 
+				<div class=""> 
+					<input type="text" name="universidad" value="{{user.universidad}}" maxlength="150" class="textinput textInput form-control" id="id_last_name"> 
+				</div>
+			</div>
 			<div class="boton d-flex justify-content-center mt-5">
-				<button type="submit" class="btn btn-danger btn-lg btn-block" style="background: #BF6300" value="CREAR">EDITAR</button>			
+				<button type="submit" class="btn btn-danger btn-lg btn-block" style="background: #BF6300" value="CREAR">ACEPTAR</button>			
 			</div>									
-		</form>		
+		</form>				
 	</div>		
 {% endblock %}

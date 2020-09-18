@@ -1,0 +1,4 @@
+
+*.pyc
+apps/usuarios/migrations/*
+apps/usuarios/migrations/0001_initial.py

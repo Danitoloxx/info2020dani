@@ -1,0 +1,100 @@
+.post-listar
+{
+	max-height: 170px;
+}
+
+.post-listar .img
+{
+	max-height: 169px;
+	overflow: hidden;
+}
+
+.post-listar .img .card-img
+{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.page-item.active .page-link 
+{
+	border-color: #dc3545;
+}
+
+@media (max-width: 575.98px) 
+{
+	.post-listar .card-body
+	{
+		padding: .5rem;
+	}
+
+	.post-listar .card-body .card-title
+	{
+		margin-bottom: .25rem;
+	}
+
+	.post-listar
+	{
+		max-height: 500px;
+	}
+
+	.post-listar .img
+	{
+		max-height: 500px;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) 
+{
+	.post-listar .card-body
+	{
+		padding: .25rem;
+	}
+
+	.post-listar .card-body .card-title
+	{
+		margin-bottom: .1rem;
+	}
+
+	h5
+	{
+		font-size: 1.15rem;
+	}
+
+	.item 
+	{
+		font-size: 14px;
+	}
+
+	.post-listar
+	{
+		max-height: 78px;
+	}
+
+	.post-listar .img
+	{
+		max-height: 77px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) 
+{
+	.post-listar .card-body
+	{
+		padding: .5rem;
+	}
+
+	.post-listar .card-body .card-title
+	{
+		margin-bottom: .25rem;
+	}
+
+	.post-listar
+	{
+		max-height: 105px;
+	}
+
+	.post-listar .img
+	{
+		max-height: 104px;
+	}
+}

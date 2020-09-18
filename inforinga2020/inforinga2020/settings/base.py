@@ -21,6 +21,11 @@ LOGIN_REDIRECT_URL = reverse_lazy('inicio')
 LOGOUT_REDIRECT_URL = reverse_lazy('inicio')
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+#apps post
+LOGIN_URL = reverse_lazy('login')
+#formato de imagenes permitidos para portada
+ALLOWED_IMG = ('.jpg', '.jpeg', '.bmp', '.png')
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -31,7 +36,9 @@ INSTALLED_APPS = [
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 	'apps.usuarios',
+	'apps.post',
 	'crispy_forms',
+	'precise_bbcode',
 ]
 
 MIDDLEWARE = [
@@ -110,5 +117,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS =( 
     os.path.join(os.path.dirname(BASE_DIR), 'static'),
     )
-MEDIA = '/media/'
+
+#es necesario que se llame MEDIA_URL
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')

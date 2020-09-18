@@ -1,9 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 
+<!-- AGREGO EL TITULO DEL TEMPLATE-->
+{% block titulo %}
+Perfil
+{% endblock %}
+
+<!--DE ESTA FORMA AGREGO EL PERFIL.CSS AL BLOQUE DE LA BASE/ BLOCK.SUPER SE USA PARA OBTENER EL CONTENIDO DEL BLOQUE PADRE -->
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'usuarios/css/perfil.css' %}">
+{% endblock %}
+
 {% block contenido %}
 
-    <div class="container cuerpo mt-2 text-white shadow-lg p-3 rounded"> 
+    <div class="container cuerpo mt-5 mb-5 text-white shadow-lg p-3 rounded"> 
         <div class="container perfil d-flex justify-content-center text-white ">
             <h2 class="titulo mt-3 mb-4">PERFIL DE USUARIO</h2>
         </div>
@@ -12,10 +23,13 @@
             <p class="item d-flex justify-content-center"> Nombre <p class="d-flex justify-content-center rounded pt-2 pb-2" style="background-color: #005943"> {{user.first_name}} </p> </p>
             <p class="item d-flex justify-content-center"> Apellido <p class="d-flex justify-content-center rounded pt-2 pb-2" style="background-color: #005943"> {{user.last_name}} </p> </p>
             <p class="item d-flex justify-content-center"> Email <p class="d-flex justify-content-center rounded pt-2 pb-2" style="background-color: #005943"> {{user.email}} </p> </p>
+            <p class="item d-flex justify-content-center"> Provincia <p class="d-flex justify-content-center rounded pt-2 pb-2" style="background-color: #005943"> {{user.provincia}} </p> </p>
+            <p class="item d-flex justify-content-center"> Ciudad <p class="d-flex justify-content-center rounded pt-2 pb-2" style="background-color: #005943"> {{user.ciudad}} </p> </p>
+            <p class="item d-flex justify-content-center"> Universidad <p class="d-flex justify-content-center rounded pt-2 pb-2" style="background-color: #005943"> {{user.universidad}} </p> </p>
         </div>
-        <div class="botonmodificar">
-            <a href="{% url 'usuarios:editar' %}" class="btn btn-danger mt-5 btn-lg btn-block" style="background-color: #BF6300;">MODIFICAR PERFIL</a>            
+        <div class="botonmodificar mt-5">
+            <a href="{% url 'usuarios:editar' %}" class="btn btn-danger mt-4 btn-lg btn-block" style="background-color: #BF6300;">MODIFICAR PERFIL</a>            
         </div>
     </div>
-
+    
 {% endblock %}

@@ -2,6 +2,17 @@
 {% load crispy_forms_tags %}
 {% load static %}
 
+<!-- AGREGO EL TITULO DEL TEMPLATE-->
+{% block titulo %}
+Registro
+{% endblock %}
+
+<!--DE ESTA FORMA AGREGO EL REGISTRE.CSS AL BLOQUE DE LA BASE/ BLOCK.SUPER SE USA PARA OBTENER EL CONTENIDO DEL BLOQUE PADRE -->
+{% block css %}
+    {{ block.super }}
+   	<link rel="stylesheet" type="text/css" href="{% static 'usuarios/css/registro.css' %}">
+{% endblock %}
+
 {% block contenido %}
 	<div class="container registro text-white shadow-lg p-3 rounded" style="background:#007F5F">
 		<div class="d-flex justify-content-center mb-4 mt-4">

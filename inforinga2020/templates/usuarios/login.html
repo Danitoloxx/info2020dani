@@ -1,8 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 
+
+<!-- AGREGO EL TITULO DEL TEMPLATE-->
+{% block titulo %}
+Login
+{% endblock %}
+
+<!--DE ESTA FORMA AGREGO EL LOGIN.CSS AL BLOQUE DE LA BASE/ BLOCK.SUPER SE USA PARA OBTENER EL CONTENIDO DEL BLOQUE PADRE -->
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'usuarios/css/login.css' %}">
+{% endblock %}
+
 {% block contenido %}             
-    <div class="container login mt-2 text-white shadow-lg p-3 rounded" style="background:#007F5F">        
+    <div class="container login mt-5 text-white shadow-lg p-3 rounded" style="background:#007F5F">        
         <div class="titulo d-flex justify-content-center mb-3 mt-5">
             <h1>INICIAR SESION</h1>
         </div>
@@ -17,6 +30,9 @@
         <br>
         <div class="container d-flex justify-content-center">            
             <a class="text-white" href="{% url 'usuarios:registrar' %}">¿No tenes cuenta? Registrate. </a>
+        </div>
+        <div class="container d-flex justify-content-center">            
+            <a class="text-white" href="#">¿Olvidaste tu nombre de usuario/contraseña? Click Aquí. </a>
         </div>
     </div>
     <br>
