@@ -10,3 +10,9 @@
 .entrada {
     padding-top: 50px;    
 }
+
+.btn:active {
+    background-color: #9d5202!Important;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

@@ -2,6 +2,12 @@ body {
     background-color: #232E2E;
 }
 
+.btn:active {
+    background-color: #9d5202!Important;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 .imagenlogo {
     background-color: #007F5F;
     height: 15vh;
@@ -41,4 +47,5 @@ body {
 
 .post-mostrar a
 {
-    color: #232E2E!important; 
+    color: #232E2E!important;
+} 

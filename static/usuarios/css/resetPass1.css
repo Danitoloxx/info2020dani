@@ -1,17 +1,27 @@
 .login {    
-    height: 100%;
+    height: 600px;
     width: 600px;    
 }
 
 .titulo h1 {
+    margin-top: 30px;
     font-size: 40px;
     padding-bottom: 30px;
 }
 
 .entrada  {
-    padding-top: 0px;    
+    padding-top: 40px;    
+}
+.entrada .boton {
+    margin-top: 20px;
 }
 
 #id_email {
     width: 100%;
+}
+
+.btn:active {
+    background-color: #9d5202!Important;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
