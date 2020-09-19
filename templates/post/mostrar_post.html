@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+<!-- AGREGO EL TITULO DEL TEMPLATE-->
+{% block titulo %}
+	{{ object.titulo }}
+{% endblock %}
+
+{% block contenido %}
+	<div class="row cuerpo item text-white rounded post-mostrar">
+		<div class="col-12">
+			<h2 class="mt-4 mb-2">{{ object.titulo }}</h2>
+		</div>
+
+		<div class="col-12 mb-4">
+			<small>Post creado por {{ object.usuario.username }}</small>
+		</div>
+
+		<div class="col-12 mb-4">
+			{{ object.contenido|safe }}
+		</div>
+	</div>
+{% endblock %}

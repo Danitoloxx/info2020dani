@@ -1,0 +1,44 @@
+body {
+    background-color: #232E2E;
+}
+
+.imagenlogo {
+    background-color: #007F5F;
+    height: 15vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#page-content {
+    flex: 1 0 auto;    
+}
+  
+#sticky-footer {
+    flex-shrink: none;
+    margin-top: 100px;    
+}
+
+.cuerpo
+{
+	background-color: #007F5F!important
+}
+
+.item 
+{
+    font-size: 20px;
+    font-family: 'calibri';
+}
+
+.cuerpo-oscuro
+{
+    background-color: #232E2E;
+}
+
+.boton-naranja, .boton-naranja:hover, .boton-naranja:active, .boton-naranja:focus
+{
+	background-color: #BF6300!important
+}
+
+.post-mostrar a
+{
+    color: #232E2E!important; 
