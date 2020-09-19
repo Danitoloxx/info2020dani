@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- AGREGO EL TITULO DEL TEMPLATE-->
+{% block titulo %}
+Recuperar Contraseña
+{% endblock %}
+
+<!--DE ESTA FORMA AGREGO EL REGISTRE.CSS AL BLOQUE DE LA BASE/ BLOCK.SUPER SE USA PARA OBTENER EL CONTENIDO DEL BLOQUE PADRE -->
+{% block css %}
+    {{ block.super }}
+   	<link rel="stylesheet" type="text/css" href="{% static 'usuarios/css/resetPass3.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<div class="container login mt-5 text-white shadow-lg p-3 rounded" style="background:#007F5F">
+    <div class="titulo d-flex justify-content-center mb-3 mt-5">
+        <h4>Un correo fue enviado a la dirección seleccionada para restablecer la contraseña</h4>
+    </div>
+    <div class="container d-flex justify-content-center">            
+        <a class="text-white" href="{% url 'inicio' %}">Volver al Inicio. </a>
+    </div>
+    <div class="container d-flex justify-content-center">            
+        <a class="text-white" href="{% url 'login' %}">Volver a iniciar sesion. </a>
+    </div>
+</div>
+{% endblock %}

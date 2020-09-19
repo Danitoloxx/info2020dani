@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- AGREGO EL TITULO DEL TEMPLATE-->
+{% block titulo %}
+Recuperar Contraseña
+{% endblock %}
+
+<!--DE ESTA FORMA AGREGO EL REGISTRE.CSS AL BLOQUE DE LA BASE/ BLOCK.SUPER SE USA PARA OBTENER EL CONTENIDO DEL BLOQUE PADRE -->
+{% block css %}
+    {{ block.super }}
+   	<link rel="stylesheet" type="text/css" href="{% static 'usuarios/css/resetPass4.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<form method="post">
+    {% csrf_token %}
+    <div class="container login mt-5 text-white shadow-lg p-3 rounded" style="background:#007F5F">
+        <div class="titulo d-flex justify-content-center mb-3 mt-5">
+            <h1>INGRESO DE NUEVA CONTRASEÑA</h1>
+        </div>
+        <div class="entrada">
+            {{form}}
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-danger mt-3 btn-lg btn-block" style="background: #BF6300" value="ENVIAR">ACEPTAR</button>            
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

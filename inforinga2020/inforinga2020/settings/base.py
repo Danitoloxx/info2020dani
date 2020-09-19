@@ -121,3 +121,11 @@ STATICFILES_DIRS =(
 #es necesario que se llame MEDIA_URL
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
+
+#para el envio de correos
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_POST = 587
+EMAIL_HOST_USER = 'django3551@gmail.com'
+EMAIL_HOST_PASSWORD = 'Prueba3551'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

@@ -1,0 +1,10 @@
+{% autoescape off %}
+Hola {{user.get_username}}. Solicitaste reestablecer tu contraseña.
+Hace click en el siguiente link para crear una nueva contraseña.
+{% block reset_link %}
+{{ protocol }}://{{ domain }}{% url 'usuarios:password_reset_confirm' uidb64=uid token=token %}
+{% endblock %}
+
+Saludos
+Team Inforinga
+{% endautoescape %}

@@ -1,0 +1,17 @@
+.login {    
+    height: 100%;
+    width: 600px;    
+}
+
+.titulo h1 {
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+.entrada  {
+    padding-top: 0px;    
+}
+
+#id_email {
+    width: 100%;
+}

@@ -65,3 +65,4 @@ class MostrarPost(DetailView):
 			i += 1
 
 		return context
+
