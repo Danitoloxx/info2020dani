@@ -13,15 +13,17 @@ Recuperar Contraseña
 {% endblock %}
 
 {% block contenido %}
-<div class="container login mt-5 text-white shadow-lg p-3 rounded" style="background:#007F5F">
-    <div class="titulo d-flex justify-content-center mb-3 mt-5">
-        <h4>Registro realizado satisfactoriamente. ¡Bienvenido a Inforinga!</h4>
-    </div>
-    <div class="container d-flex justify-content-center">            
-        <a class="text-white" href="{% url 'inicio' %}">Volver al Inicio. </a>
-    </div>
-    <div class="container d-flex justify-content-center">            
-        <a class="text-white" href="{% url 'login' %}">Iniciar sesion. </a>
+<div class="container cartel">
+    <div class="container cartel-adentro mt-5 text-white shadow-lg p-5 rounded-lg" style="background:#007F5F">
+        <div class="titulo d-flex justify-content-center mb-3 mt-5">
+            <h3>Registro realizado satisfactoriamente. ¡Bienvenido a Inforinga!</h3>
+        </div>
+        <div class="container d-flex justify-content-center">            
+            <a class="text-white" href="{% url 'inicio' %}">Volver al Inicio. </a>
+        </div>
+        <div class="container d-flex justify-content-center">            
+            <a class="text-white" href="{% url 'login' %}">Iniciar sesion. </a>
+        </div>
     </div>
 </div>
 {% endblock %}

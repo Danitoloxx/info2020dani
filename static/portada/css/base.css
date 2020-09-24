@@ -1,5 +1,10 @@
 body {
-    background-color: #232E2E;
+    /*background-color: #232E2E;*/
+    background: url("/static/portada/image/libra60%.jpg") no-repeat;    
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
 }
 
 .btn:active {

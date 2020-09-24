@@ -1,0 +1,4 @@
+.contenido-index {
+    margin-top: 30px;    
+    min-height: calc(100vh - 310px - 100px);
+}
