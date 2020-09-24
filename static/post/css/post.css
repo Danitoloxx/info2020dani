@@ -1,12 +1,19 @@
+
+.row {
+	margin-top: 50px;
+	margin-left: 50px;
+	margin-right: 50px;		
+}
 .post-listar
 {
-	max-height: 170px;
+	max-height: 470px;
 }
 
 .post-listar .img
 {
 	max-height: 169px;
 	overflow: hidden;
+	margin-bottom: 50px;
 }
 
 .post-listar .img .card-img
@@ -39,7 +46,7 @@
 
 	.post-listar .img
 	{
-		max-height: 500px;
+		max-height: 200px;
 	}
 }
 

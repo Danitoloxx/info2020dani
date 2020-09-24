@@ -1,22 +1,28 @@
 {% extends 'base.html' %}
+{% load static %}
 
 <!-- AGREGO EL TITULO DEL TEMPLATE-->
 {% block titulo %}
 	{{ object.titulo }}
 {% endblock %}
 
+{% block css %}
+  {{ block.super }}
+   <link rel="stylesheet" type="text/css" href="{% static 'post/css/mostrar_post.css' %}">
+{% endblock %}
+
 {% block contenido %}
-	<div class="row cuerpo item text-white rounded post-mostrar">
-		<div class="col-12">
-			<h2 class="mt-4 mb-2">{{ object.titulo }}</h2>
-		</div>
-
-		<div class="col-12 mb-4">
-			<small>Post creado por {{ object.usuario.username }}</small>
-		</div>
-
-		<div class="col-12 mb-4">
-			{{ object.contenido|safe }}
+	<div class="container text-white" style="min-height: calc(100vh - 330px - 100px);">
+		<div class="row text-white rounded post-mostrar rounded" style="background: #007F5F;">
+			<div class="container d-flex mt-4 justify-content-center">
+				<h1 class="mb-2">{{ object.titulo }}</h1>
+			</div>
+			<div class="container mb-4 d-flex justify-content-end">
+				<small>Post creado por {{ object.usuario.username }}</small>
+			</div>
+			<div class="container pt-4 pb-4 rounded mr-4 ml-4 mb-4" style="min-height: 400px; background: #005943;">
+				{{ object.contenido|safe }}
+			</div>
 		</div>
 	</div>
-{% endblock %}
+{% endblock %}	
