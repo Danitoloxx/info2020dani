@@ -1,5 +1,7 @@
-
+.registro {
+    margin-top: 30px;    
+}
 .container .form-group .form-text {
     color: #5cb85c!Important;
-    margin-top: 15px;
+    margin-top: 15px;    
 }

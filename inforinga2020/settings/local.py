@@ -7,7 +7,7 @@ ALLOWED_HOSTS = []
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'pruebaerror',
+        'NAME': 'inforingaDB',
         'Trusted_Connection' : 'yes',
         'HOST': 'localhost\SQLEXPRESS',
         'OPTIONS':{
