@@ -19,5 +19,5 @@ urlpatterns = [
 	path('', include('apps.post.urls')), 
 
 	# AGREGO EL MEDIA_URL A LAS URL   
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

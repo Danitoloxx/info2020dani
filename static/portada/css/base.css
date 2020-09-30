@@ -1,56 +1,100 @@
 body {
-    /*background-color: #232E2E;*/
-    background: url("/static/portada/image/libra60%.jpg") no-repeat;    
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #464646;
-}
-
-.btn:active {
-    background-color: #9d5202!Important;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+		/*background-color: #232E2E;*/
+		background: url("/static/portada/image/libra60%.jpg") no-repeat;    
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
+		background-color: #464646;
 }
 
 .imagenlogo {
-    background-color: #007F5F;
-    height: 15vh;
-    background-size: cover;
-    background-position: center;
+		background-color: #303535;
+		height: 15vh;
+		background-size: cover;
+		background-position: center;
 }
 
 #page-content {
-    flex: 1 0 auto;    
+		flex: 1 0 auto;    
 }
-  
+	
 #sticky-footer {
-    flex-shrink: none;
-    margin-top: 100px;    
+		flex-shrink: none;
+		margin-top: 100px;    
 }
 
 .cuerpo
 {
-	background-color: #007F5F!important
+		background-color: #404848!important
 }
 
 .item 
 {
-    font-size: 20px;
-    font-family: 'calibri';
+		font-size: 20px;
+		font-family: 'calibri';
 }
 
 .cuerpo-oscuro
 {
-    background-color: #232E2E;
+		background-color: #232E2E;
 }
 
-.boton-naranja, .boton-naranja:hover, .boton-naranja:active, .boton-naranja:focus
-{
-	background-color: #BF6300!important
-}
 
 .post-mostrar a
 {
-    color: #232E2E!important;
+		color: #232E2E!important;
 } 
+
+.btn-boton_personalizado{
+	padding: .375rem .75rem;
+	border-radius: .25rem;
+	background-color: #EF891E;
+	color: #000000;
+	font-weight: bold;
+	transition: background-color .15s ease-in-out;
+}
+
+.btn-boton_personalizado:hover, .btn-boton_personalizado:focus {
+	background-color: #F0B474;
+	color: #000000
+}
+
+.btn-boton_personalizado:active {
+	background-color: #EF891E;
+}
+
+.btn-navbar{
+	padding: .375rem .75rem;
+	border-radius: .25rem;
+	background-color: #858F8F;
+	color: #FFFFFF;
+	font-weight: bold;
+	transition: background-color .15s ease-in-out;
+}
+
+.btn-navbar:hover, .btn-navbar:focus {
+	background-color: #1C2525;
+	color: #FFFFFF
+}
+
+.btn-navbar:active {
+	background-color: #1C2525;
+}
+
+.btn-buscar{
+	padding: .375rem .75rem;
+	border-radius: .25rem;
+	background-color: #EF891E;
+	color: #000000;
+	font-weight: bold;
+	transition: background-color .15s ease-in-out;
+}
+
+.btn-buscar:hover, .btn-buscar:focus {
+  background-color: #F0B474;
+  color: #000000
+}
+
+.btn-buscar:active {
+  background-color: #EF891E;
+}

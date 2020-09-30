@@ -14,8 +14,9 @@ Login
     <link rel="stylesheet" type="text/css" href="{% static 'usuarios/css/login.css' %}">
 {% endblock %}
 
+
 {% block contenido %}             
-    <div class="container login mt-5 text-white shadow-lg p-3 rounded" style="background:#007F5F">        
+    <div class="container login mt-5 text-white shadow-lg p-3 rounded" style="background-color: #303535">        
         <div class="titulo d-flex justify-content-center mb-3 mt-5">
             <h1>INICIAR SESION</h1>
         </div>
@@ -23,7 +24,7 @@ Login
             <form class="" method="POST">{% csrf_token %}                
                 {{ form|crispy }}
                 <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn btn-danger mt-3 btn-lg btn-block" style="background: #BF6300" value="ENVIAR">ACCEDER</button>            
+                    <button type="submit" class="btn btn-boton_personalizado mt-3 btn-lg btn-block" value="ENVIAR">ACCEDER</button>            
                 </div>
             </form>
         </div>

@@ -1,0 +1,7 @@
+{% load static %}
+<div class="col-12 mb-4">
+	<small><strong>{{ comment.usuario.username }} - {{ comment.fecha_creacion }}</strong></small>
+	<br/>
+	{{ comment.contenido|linebreaks }}
+</div>
+<hr>

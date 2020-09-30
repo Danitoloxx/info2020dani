@@ -1,7 +1,7 @@
 
 .cuerpo {    
-    background-color: #007F5F!Important;    
-    height: 950px;
+    background-color: #303535 !Important;    
+    height: 100%;
     width: 650px;
     padding-top: 40px;
 }
@@ -12,7 +12,11 @@
 }
 
 .btn:active {
-    background-color: #9d5202!Important;
+    background-color: #EC94A2!Important;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+}
+
+.img-responsive {
+    max-width: 20%;
 }

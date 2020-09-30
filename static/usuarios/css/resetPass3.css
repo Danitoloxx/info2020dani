@@ -1,7 +1,0 @@
-.cartel {    
-    min-height: calc(100vh - 34.5vh - 100px);
-}
-
-.cartel .cartel-adentro {
-    height: 300px;
-}

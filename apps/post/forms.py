@@ -1,5 +1,5 @@
 from django import forms
-from apps.post.models import Post
+from apps.post.models import Post, Comentario
 from django.conf import settings
 
 class PostForm(forms.ModelForm):
@@ -17,3 +17,13 @@ class PostForm(forms.ModelForm):
 		labels = {
 			'titulo': 'Ingrese el Titulo',
 		}
+
+
+class ComentarioForm(forms.ModelForm):
+
+	class Meta:
+		model = Comentario
+
+		fields = [
+			'contenido',
+		]

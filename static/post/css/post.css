@@ -4,6 +4,7 @@
 	margin-left: 50px;
 	margin-right: 50px;		
 }
+
 .post-listar
 {
 	max-height: 470px;
@@ -104,4 +105,107 @@
 	{
 		max-height: 104px;
 	}
+}
+
+.btn-boton_personalizado{
+	padding: .375rem .75rem;
+	border-radius: .25rem;
+	background-color: #EF891E;
+	color: #000000;
+	font-weight: bold;
+	transition: background-color .15s ease-in-out;
+}
+
+.btn-boton_personalizado:hover, .btn-boton_personalizado:focus {
+	background-color: #F0B474;
+	color: #000000
+}
+
+.btn-boton_personalizado:active {
+	background-color: #EF891E;
+}
+
+
+.btn-editar{
+	padding: .375rem .75rem;
+	border-radius: .25rem;
+	background-color: #EF891E;
+	color: #000000;
+	font-weight: bold;
+	transition: background-color .15s ease-in-out;
+}
+
+.btn-editar:hover, .btn-editar:focus {
+  background-color: #F0B474;
+  color: #000000
+}
+
+.btn-editar:active {
+  background-color: #EF891E;
+}
+
+.btn-eliminar{
+	padding: .375rem .75rem;
+	border-radius: .25rem;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-weight: bold;
+	transition: background-color .15s ease-in-out;
+}
+
+.btn-eliminar:hover, .btn-eliminar:focus {
+  background-color: #EF891E;
+  color: #000000
+}
+
+.btn-eliminar:active {
+  background-color: #EF891E;
+}
+
+.btn-like{
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+  background-color: #EF891E;
+  color: #000000;
+  font-weight: bold;
+  transition: background-color .15s ease-in-out;
+}
+
+.btn-like:hover, .btn-like:focus {
+  background-color: #FFFFFF;
+  color: #000000
+}
+
+.btn-like:active {
+  background-color: #2CA48E;
+}
+
+.btn-dislike{
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+  background-color: #AB1807;
+  color: #FFFFFF;
+  font-weight: bold;
+  transition: background-color .15s ease-in-out;
+}
+
+.btn-dislike:hover, .btn-dislike:focus {
+  background-color: #FFFFFF;
+  color: #000000
+}
+
+.btn-dislike:active {
+  background-color: #AB1807;
+}
+
+.fondo {
+	min-height: calc(100vh - 100px - 330px);
+}
+
+.post-ver {
+	min-height: calc(100vh - 100px - 330px);
+}
+
+.comentario {
+	min-height: calc(100vh - 100px - 330px);
 }

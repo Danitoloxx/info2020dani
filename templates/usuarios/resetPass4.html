@@ -12,17 +12,18 @@ Recuperar Contraseña
    	<link rel="stylesheet" type="text/css" href="{% static 'usuarios/css/resetPass4.css' %}">
 {% endblock %}
 
+
 {% block contenido %}
 <form method="post">
     {% csrf_token %}
-    <div class="container login mt-5 text-white shadow-lg p-3 rounded" style="background:#007F5F">
+    <div class="container login mt-5 text-white shadow-lg p-3 rounded" style="background-color: #303535">
         <div class="titulo d-flex justify-content-center mb-3 mt-5">
             <h1>INGRESO DE NUEVA CONTRASEÑA</h1>
         </div>
         <div class="entrada">
             {{form}}
             <div class="d-flex justify-content-end">
-                <button type="submit" class="btn btn-danger mt-3 btn-lg btn-block" style="background: #BF6300" value="ENVIAR">ACEPTAR</button>            
+                <button type="submit" class="btn btn-boton_personalizado mt-3 btn-lg btn-block" value="ENVIAR">ACEPTAR</button>            
             </div>
         </div>
     </div>

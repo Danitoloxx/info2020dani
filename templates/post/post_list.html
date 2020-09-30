@@ -11,77 +11,93 @@ Posteos Recientes
    <link rel="stylesheet" type="text/css" href="{% static 'post/css/post.css' %}">
 {% endblock %}
 
+
+
 {% block contenido %}
-<div class="container-fuild" style="min-height: calc(100vh - 330px - 100px);">
+<div class="container-fluid post-ver">
     <div class="row cuerpo rounded text-white">
         <div class="col-12 item">
-            {% if object_list %}
-                {% for post in object_list %}
-                    <div class="post-listar card mt-4" style="background: #005943;">
-                        <div class="row no-gutters">
-                            <div class="col-12 col-sm-3 img">
-                                <img src="{{ post.portada.url }}" class="card-img" alt="{{ post.titulo }}">
-                            </div>
-                            <div class="col-12 col-sm-9">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="{% url 'MostrarPost' post.id %}">{{ post.titulo }}</a></h5>
-                                    <div class="card-text"><small>Posteado por <strong>{{ post.usuario.username }}</strong> en la categoria <strong>{{ post.categoria.nombre }}</strong></small></div>
-                                    <div class="card-text"><small class="text-muted">Posteado el {{ post.fecha_creacion|date:'d-m-Y H:i' }}.</small></div>
+        {% if object_list %}
+            {% for post in object_list %}
+                        <div class="post-listar card mt-4 cuerpo-oscuro">
+                            <div class="row no-gutters">
+                                <div class="col-12 col-md-2 img">
+                                    {% if post.portada %}
+                                        <img src="{{ post.portada.url }}" class="card-img" alt="{{ post.titulo }}">
+                                    {% else %}
+                                        <img src="{% static 'portada/image/LogoINFORINGA-01.png' %}" class="card-img" alt="{{ post.titulo }}">
+                                    {% endif %}
+                                </div>
+                                <div class="col-12 col-sm-9">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-uppercase" ><a href="{% url 'MostrarPost' post.id %}" style="color: #E8B13B">{{ post.titulo }} </a></h3>
+                                        <h5>Comentarios: <strong>{{ post.commentsPost.count }}</strong></h5>
+                                        <div class="card-text">
+                                            <small>Posteado por 
+                                                <strong>{{ post.usuario.username }}</strong> en la categoria 
+                                                <strong>{{ post.categoria.nombre }}</strong>
+                                            </small>
+                                        </div>
+                                        <div class="card-text"><small class="text-muted">Posteado el {{ post.fecha_creacion|date:'d-m-Y H:i' }}.</small></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                {% endfor %}
-                <nav class="mt-4 item text-white">
-                    <ul class="pagination justify-content-center">
-                    {% if page_obj.has_previous %}
-                        <li class="page-item">
-                            <a class="page-link boton-naranja btn-danger" href="?page={{ page_obj.previous_page_number }}">
-                                <span class="text-white" aria-hidden="true">&laquo;</span>
-                                <span class="sr-only text-white">Previous</span>
-                            </a>
-                        </li>
-                    {% else %}
-                        <li class="page-item disabled">
-                            <a class="page-link boton-naranja btn-danger" href="#">
-                                <span class="text-white" aria-hidden="true">&laquo;</span>
-                                <span class="sr-only text-white">Previous</span>
-                            </a>
-                        </li>
-                    {% endif %}
-                    {% for i in page_obj.paginator.page_range %}
-                        {% if page_obj.number == i %}
-                            <li class="page-item active">
-                                <a class="page-link boton-naranja btn-danger text-white" href="#">{{ i }} <span class="sr-only">(current)</span></a>
-                            </li>
-                        {% else %}
-                            <li class="page-item">
-                                <a class="page-link boton-naranja btn-danger text-white" href="?page={{ i }}">{{ i }}</a>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                    {% if page_obj.has_next %}
-                        <li class="page-item">
-                            <a class="page-link boton-naranja btn-danger" href="?page={{ page_obj.next_page_number }}">
-                                <span class="text-white" aria-hidden="true">&raquo;</span>
-                                <span class="sr-only text-white">Next</span>
-                            </a>
-                        </li>
-                    {% else %}
-                        <li class="page-item disabled">
-                            <a class="page-link boton-naranja btn-danger" href="#">
-                                <span class="text-white" aria-hidden="true">&raquo;</span>
-                                <span class="sr-only text-white">Next</span>
-                            </a>
-                        </li>
-                    {% endif %}
-                    </ul>
-                </nav>
-            {% else %}
+            {% endfor %}
             <div class="text-center mb-4 mt-4">
-                Aún no se ha realizado ni un Post. 
+                <a href="{% url 'CrearPost' %}" class=" btn btn-boton_personalizado">Crear Post</a>
             </div>
-            {% endif %}
+            <nav class="mt-4 item text-white">
+                <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="btn btn-boton_personalizado" href="?page={{ page_obj.previous_page_number }}">
+                            <span class="text-white" aria-hidden="true">&laquo;</span>
+                            <span class="sr-only text-white">Previous</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="btn btn-boton_personalizado" href="#">
+                            <span class="text-white" aria-hidden="true">&laquo;</span>
+                            <span class="sr-only text-white">Previous</span>
+                        </a>
+                    </li>
+                {% endif %}
+                {% for i in page_obj.paginator.page_range %}
+                    {% if page_obj.number == i %}
+                        <li class="page-item active">
+                            <a class="btn btn-boton_personalizado text-white" href="#">{{ i }} <span class="sr-only">(current)</span></a>
+                        </li>
+                    {% else %}
+                        <li class="page-item">
+                            <a class="btn btn-boton_personalizado text-white" href="?page={{ i }}">{{ i }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="btn btn-boton_personalizado" href="?page={{ page_obj.next_page_number }}">
+                            <span class="text-white" aria-hidden="true">&raquo;</span>
+                            <span class="sr-only text-white">Next</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="btn btn-boton_personalizado" href="#">
+                            <span class="text-white" aria-hidden="true">&raquo;</span>
+                            <span class="sr-only text-white">Next</span>
+                        </a>
+                    </li>
+                {% endif %}
+                </ul>
+            </nav>
+        {% else %} 
+        <div class="text-center mb-4 mt-4">
+            Aún no se ha realizado ni un Post.
+            <a href="{% url 'CrearPost' %}" class=" btn btn-boton_personalizado">Crear Post</a>
+        </div>
+        {% endif %}
         </div>
     </div>
 </div>
